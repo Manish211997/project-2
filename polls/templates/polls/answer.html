@@ -1,0 +1,311 @@
+<html lang="en">
+<head>
+  <title>Summarized</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+  <link rel="icon" 
+      type="image/png" 
+      href="http://www.lizbentley.com/sites/default/files/images/content/retreat-facilitation.png">
+<style>
+svg {
+}
+
+text {
+  fill: #35322a;
+  filter: url('#money');
+  font-family: 'Playfair Display', 'Georgia', serif;
+  font-size: 120px;
+  font-weight: 900;
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  scroll-behavior: smooth;
+  background: 
+}
+
+
+/* Style the header */
+.header {
+  background-color: #f1f1f1;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* Style the topnav links */
+
+/* Create three unequal columns that floats next to each other */
+.column {
+  float: left;
+  padding: 10px;
+}
+
+/* Left and right column */
+.column.side {
+  width:24em;
+  float: right;
+}
+
+/* Middle column */
+.column.middle {
+  width: 60%;
+  padding-left:2em;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column.side, .column.middle {
+    width: 100%;
+  }
+svg
+{
+  zoom:49%;
+}
+}
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#myBtn:hover {
+  background-color: #444;
+}
+</style>
+</head>
+<body>
+<div id="top"></div>
+<div class="header">
+ <svg width='600' height='200'>
+  <filter id='money'>
+    <feMorphology in='SourceGraphic' operator='dilate' radius='2' result='expand'/>
+
+    <feOffset in='expand' dx='1' dy='1' result='shadow_1'/>
+    <feOffset in='expand' dx='2' dy='2' result='shadow_2'/>
+    <feOffset in='expand' dx='3' dy='3' result='shadow_3'/>
+    <feOffset in='expand' dx='4' dy='4' result='shadow_4'/>
+    <feOffset in='expand' dx='5' dy='5' result='shadow_5'/>
+    <feOffset in='expand' dx='6' dy='6' result='shadow_6'/>
+    <feOffset in='expand' dx='7' dy='7' result='shadow_7'/>
+
+    <feMerge result='shadow'>
+      <feMergeNode in='expand'/>
+      <feMergeNode in='shadow_1'/>
+      <feMergeNode in='shadow_2'/>
+      <feMergeNode in='shadow_3'/>
+      <feMergeNode in='shadow_4'/>
+      <feMergeNode in='shadow_5'/>
+      <feMergeNode in='shadow_6'/>
+      <feMergeNode in='shadow_7'/>
+    </feMerge>
+
+    <feFlood flood-color='#ebe7e0'/>
+    <feComposite in2='shadow' operator='in' result='shadow'/>
+
+    <feMorphology in='shadow' operator='dilate' radius='1' result='border'/>
+    <feFlood flood-color='#35322a' result='border_color'/>
+    <feComposite in2='border' operator='in' result='border'/>
+
+    <feOffset in='border' dx='1' dy='1' result='secondShadow_1'/>
+    <feOffset in='border' dx='2' dy='2' result='secondShadow_2'/>
+    <feOffset in='border' dx='3' dy='3' result='secondShadow_3'/>
+    <feOffset in='border' dx='4' dy='4' result='secondShadow_4'/>
+    <feOffset in='border' dx='5' dy='5' result='secondShadow_5'/>
+    <feOffset in='border' dx='6' dy='6' result='secondShadow_6'/>
+    <feOffset in='border' dx='7' dy='7' result='secondShadow_7'/>
+    <feOffset in='border' dx='8' dy='8' result='secondShadow_8'/>
+    <feOffset in='border' dx='9' dy='9' result='secondShadow_9'/>
+    <feOffset in='border' dx='10' dy='10' result='secondShadow_10'/>
+    <feOffset in='border' dx='11' dy='11' result='secondShadow_11'/>
+
+    <feMerge result='secondShadow'>
+      <feMergeNode in='border'/>
+      <feMergeNode in='secondShadow_1'/>
+      <feMergeNode in='secondShadow_2'/>
+      <feMergeNode in='secondShadow_3'/>
+      <feMergeNode in='secondShadow_4'/>
+      <feMergeNode in='secondShadow_5'/>
+      <feMergeNode in='secondShadow_6'/>
+      <feMergeNode in='secondShadow_7'/>
+      <feMergeNode in='secondShadow_8'/>
+      <feMergeNode in='secondShadow_9'/>
+      <feMergeNode in='secondShadow_10'/>
+      <feMergeNode in='secondShadow_11'/>
+    </feMerge>
+
+    <feImage x='0' y='0' width='600' height='200' xlink:href='https://s3-us-west-2.amazonaws.com/s.cdpn.io/78779/stripes.svg'/>
+    <feComposite in2='secondShadow' operator='in' result='secondShadow'/>
+
+    <feMerge>
+      <feMergeNode in='secondShadow'/>
+      <feMergeNode in='border'/>
+      <feMergeNode in='shadow'/>
+      <feMergeNode in='SourceGraphic'/>
+    </feMerge>
+  </filter>
+
+  <text dominant-baseline='middle' text-anchor='middle' x='50%' y='50%'>
+    Textput
+  </text>
+</svg>
+  <p>Summarizes it for you and provides latest news of the related content</p>
+</div>
+
+
+<div>
+      <div class="collapse navbar-collapse navbar navbar-expand-sm bg-dark" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li><a href="#Home">Home</a></li>
+          <li><a href="#Summarize">Summarize</a></li>
+        </ul>
+      </div>
+    </div>
+  
+  <div class="column middle">
+   <div  class="text-center">
+    {% if url  !=  None %}
+    <h3>Summary</h3>
+    <p class="text-left"><strong>Recived url</strong>:  {{url}}</p>
+    <p class="text-left"><strong>Summary</strong>:<br>{{mess}}</p>
+    <p class="text-left"><strong>Recieved text</strong>:<br>{{recieved}}</p>
+
+    {% elif recieved != None %}
+    <strong>Summary</strong>
+    <p class="text-centre"> {{mess}}</p>
+    <p class="text-left"><strong>Recieved text</strong>:<br>{{recieved}}</p>
+    {% else %}
+    <h3 class="text-centre">No text Recieved</h3>
+    {% endif %}
+</div>
+  </div>
+  <div class="column side">
+    <h1>News & Sentiments</h1>
+   <div class="col-sm-3 ">
+      <div class="card" style="margin:0.7%;padding:1%;
+      width: 20rem;height:24rem;overflow-y:auto;">
+  <div class="card-body">
+    <h5 class="card-title">Sentiments Analysed</h5>
+    <canvas id="mychart"></canvas>
+  </div>
+</div>
+  </div>
+</div>
+<div class="column side">
+   <div class="col-sm-3 ">
+      <div class="card" style="margin:0.7%;padding:1%;
+      width: 20rem;height:24rem;overflow-y:auto;">
+  <div class="card-body">
+    <h5 class="card-title">{{topic}}</h5>
+    <ul>
+    {% for n in news %}
+    <li>{{ n }}</li>
+    {% endfor %}
+    </ul>
+  </div>
+</div>
+  </div>
+</div>
+<a href="#top" id="myBtn" style="z-index:99;right:20px;bottom:30px;position:fixed;color:white"><i class="fa fa-chevron-circle-up" style="font-size:10px">Top</i></a>
+<script type="text/javascript">
+  let mychart=document.getElementById('mychart');
+  let pos="{{pos}}";
+  let neg="{{neg}}";
+  let neu="{{neu}}";
+  let chart=new Chart(mychart,{
+    type:'pie',
+    data:{
+      labels:['Postive','Negative','Neutral'],
+      datasets:[{
+      label:'Sentiments',
+      data:[
+      pos,
+      neg,
+      neu
+      ],
+      backgroundColor:[
+      '#48b24f',
+      '#f00',
+      '#9CC0E7'
+      ]
+
+      }]
+    },
+    options:{}
+  })
+</script>
+<script>
+$(document).ready(function(){
+  $('body').scrollspy({target: "#top", offset: 50});   
+  $("#myNavbar a").on('click', function(event) {
+    if (this.hash !== "") {
+      event.preventDefault();
+      var hash = this.hash;
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+        window.location.hash = hash;
+      });
+    }
+  });
+});
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    document.getElementById("myBtn").style.display = "block";
+  } else {
+    document.getElementById("myBtn").style.display = "none";
+  }
+}
+$(document).ready(function(){
+  $("a").on('click', function(event) {
+
+    if (this.hash !== "") {
+      event.preventDefault();
+
+      var hash = this.hash;
+
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+
+        window.location.hash = hash;
+      });
+    } 
+  });
+});
+</script>
+</body>
+</html>

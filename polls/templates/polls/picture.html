@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Tangerine">
+    <title>Text-Check</title>
+    <link rel="icon" 
+      type="image/png" 
+      href="http://www.lizbentley.com/sites/default/files/images/content/retreat-facilitation.png">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style type="text/css">
+    * {box-sizing: border-box}
+
+/* Set height of body and the document to 100% */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial;
+}
+
+/* Style tab links */
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 50%;
+  transition: .4s;
+}
+
+.tablink:hover {
+  background-color: #777;
+  color:black;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: black;
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+}
+#heading
+{
+    background:#f4f4f4;
+    padding:5%;
+}
+#Home #News #Contact #About {background-color: white;}
+</style>
+</head>
+<body>
+    <div id="heading">
+        <h1 class="col-sm-12 text-center">Summy</h1>
+        <p class="text-center">This is summy a text summarizer you can upload your images and pdf to extract text and summarize them and also the text or url</p>
+    </div>
+<a class="tablink text-center" id="defaultOpen">Text</button>
+<a class="tablink text-center" href="picture.html">Pictures</a>
+<div id="Home" class="tabcontent">
+    <h1 class="text-center font-weight-bold">Enter your Text and URL here..</h1>
+  <form class="ml-4 mr-4" method="post" align="center" enctype="multipart/form-data">
+{%csrf_token%}
+    {{form}}
+    <br>
+<button class="btn btn-primary" type="submit">Submit</button>
+</form>
+</div>
+
+<div id="News" class="tabcontent">
+    <h1 align="center">Upload your Pictures</h1>
+ <form class="ml-4 mr-4" method="post" align="center" enctype="multipart/form-data">
+{%csrf_token%}
+    {{form1}}
+    <br>
+     <button class="btn btn-primary" type="submit">Upload file</button>
+ </form>
+</div>
+
+
+</body>
+</html> 

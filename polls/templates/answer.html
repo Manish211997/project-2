@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>answer</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+    <style>
+    body
+    {
+        color: #fff; background: linear-gradient(90deg,#01bcd4,blue);
+    }
+
+        p
+        {
+        margin-left:150px;
+        width:1000px;
+        height:auto;
+        border:hidden;
+        }
+        #corner
+        {
+        float:left;
+        font-weight:bold;
+        }
+        #clr
+        {
+        clear:both;
+        }
+        button
+    	{
+    		border:1px solid dodgerblue;
+    		border-radius:8px;
+    		background: white;
+    		width: 120px;
+    		height:40px;
+    		color:#00f;
+    		transition:.5s;
+    	}
+    	button:hover
+    	{
+    		background: dodgerblue;
+    		color: white;
+    		cursor: pointer;
+    	}
+        h3
+        {
+            color: white;
+            font-size: 3em;
+        }
+    </style>
+</head>
+<body>
+    <div class="text-center">
+    {% if url  !=  None %}
+    <h3>Summary</h3>
+    <p class="text-left"><strong>Recived url</strong>:  {{url}}</p>
+    <p class="text-left"><strong>Summary</strong>:<br>{{mess}}</p>
+    <p class="text-left"><strong>Recieved text</strong>:<br>{{recieved}}</p>
+
+    {% elif form != None %}
+    <p class="text-centre"><strong>Summary</strong>: {{form}}</p>
+    {% else %}
+    <h3 class="text-centre">No text Recieved</h3>
+    {% endif %}
+</div>
+
+</body>
+</html>
